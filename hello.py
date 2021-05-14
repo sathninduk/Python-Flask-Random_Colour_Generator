@@ -2,30 +2,30 @@ from flask import Flask
 app = Flask(__name__)
 
 import random
-import mysql.connector
 
-mydb = mysql.connector.connect (
-    user = "root",
-    password = "rootroot",
-    host = "127.0.0.1",
-    port = 3306,
-    database = "python",
-    raise_on_warnings = True
-)
-mycursor = mydb.cursor()
-mycursor.execute("SELECT fname FROM users WHERE id=1")
+@app.route('/')
+@app.route('/index')
+def index():
+    
+    return "rgb(" + str (random.randrange(0, 255)) + "," + str (random.randrange(0, 255)) + "," + str (random.randrange(0, 255)) + ")"
 
-myresult = mycursor.fetchall()
-for x in myresult:
-    @app.route('/')
-    @app.route('/index')
-    def index():
-        return "Python on browser!" + str (x)
+    #return "Python on browser!" + str (x)
 
+#import mysql.connector
 
+#mydb = mysql.connector.connect (
+#   user = "root",
+#   password = "rootroot",
+#   host = "127.0.0.1",
+#   port = 3306,
+#   database = "python",
+#   raise_on_warnings = True
+#)
+#mycursor = mydb.cursor()
+#mycursor.execute("SELECT fname FROM users WHERE id=1")
 
-
-
+#myresult = mycursor.fetchall()
+#for x in myresult:
 
 
 #import random
