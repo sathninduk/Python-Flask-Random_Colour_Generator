@@ -1,4 +1,4 @@
-# Python-Flask-Random
+# Python Flask Random Colour
  Random Colour Generator from Python - Flask
 
 **Requirements**
