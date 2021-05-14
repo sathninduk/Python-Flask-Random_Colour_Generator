@@ -1,7 +1,7 @@
 # Python-Flask-Random
  Random Colour Generator from Python - Flask
 
-Requirements
+#Requirements
 
 click==8.0.0
 
